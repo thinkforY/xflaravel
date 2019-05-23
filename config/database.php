@@ -51,7 +51,7 @@ return [
             'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8',
-            'collation' => 'utf8',
+            'collation' => 'utf8_general_ci',
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
