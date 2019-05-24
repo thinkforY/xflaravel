@@ -33,3 +33,6 @@ Route::prefix('home')->namespace('Home')->group(function () {
         Route::post('store', 'TagController@store');
     });
 });
+Route::prefix('database')->group(function () {
+	Route::get('insert','DatabaseController@insert');
+});
