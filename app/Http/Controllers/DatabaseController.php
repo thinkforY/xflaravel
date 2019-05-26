@@ -35,4 +35,20 @@ class DatabaseController extends Controller
     	->get();
     	dump($data);
     }
+    //collection
+    public function studyCollection()
+    {
+    	$array = [
+		    '', '帅', '许', 0, '峰', false, null, '博', '客'
+		];
+		$collect = collect($array);
+		// dump($collect[0]);
+		// foreach ($collect as $k => $v) {
+		// 	dump($v);
+		// }
+		dump($collect->forget(1)->filter()->implode('-'));
+		$data = DB::table('articles')->where('id','>','1')->get()->pluck('title')->implode('-');
+		dump($data);
+
+    }
 }
