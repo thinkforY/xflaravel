@@ -45,3 +45,10 @@ Route::prefix('model')->group( function () {
     Route::get('update','ModelController@update');
     Route::get('delete','ModelController@delete');
 });
+Route::prefix('view')->group( function () {
+    Route::get('index','ViewController@index');
+    Route::get('create','ViewController@create');
+    Route::post('store','ViewController@store');
+//    Route::get('update','ModelController@update');
+//    Route::get('delete','ModelController@delete');
+});
